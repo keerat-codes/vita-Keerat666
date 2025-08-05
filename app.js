@@ -9,6 +9,8 @@ require('dotenv').config();
 app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+const learningProgressRoute = require('./routes/learningProgress');
+app.use('/learningProgress', learningProgressRoute);
 const transactionsRoute = require('./routes/transactions');
 app.use('/transactions', transactionsRoute);
 const enumControlRoute = require('./routes/enumControl');
