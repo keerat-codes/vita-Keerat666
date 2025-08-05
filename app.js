@@ -9,6 +9,8 @@ require('dotenv').config();
 app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+const outdoorActivityRoute = require('./routes/outdoorActivity');
+app.use('/outdoorActivity', outdoorActivityRoute);
 const milestonesRoute = require('./routes/milestones');
 app.use('/milestones', milestonesRoute);
 const historyLogRoute = require('./routes/historyLog');
