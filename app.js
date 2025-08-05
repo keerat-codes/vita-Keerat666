@@ -9,6 +9,8 @@ require('dotenv').config();
 app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+const transactionsRoute = require('./routes/transactions');
+app.use('/transactions', transactionsRoute);
 const enumControlRoute = require('./routes/enumControl');
 app.use('/enumControl', enumControlRoute);
 const outdoorActivityRoute = require('./routes/outdoorActivity');
