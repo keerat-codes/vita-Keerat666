@@ -1,0 +1,16 @@
+const mongoose = require('mongoose');
+
+const learningProgressSchema = new mongoose.Schema({
+user_id : { type:  String, description: "Required Field", required: true },
+type : { type:  String, description: "Required Field", required: true },
+title : { type:  String, description: "Required Field", required: true },
+description : { type:  String, description: "Required Field", required: true },
+start_date : { type:  String, description: "Required Field", required: true },
+end_date : { type:  String, description: "Required Field", required: true },
+progress_percentage : { type:  String, description: "Required Field", required: true },
+status : { type:  String, description: "Required Field", required: true },
+summary_notes : { type:  String, description: "Required Field", required: true },
+review : { type:  String, description: "Required Field", required: true },
+});
+
+module.exports = mongoose.model('learningProgress', learningProgressSchema);
