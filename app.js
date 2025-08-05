@@ -9,6 +9,8 @@ require('dotenv').config();
 app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+const milestonesRoute = require('./routes/milestones');
+app.use('/milestones', milestonesRoute);
 const historyLogRoute = require('./routes/historyLog');
 app.use('/historyLog', historyLogRoute);
 const todoRoute = require('./routes/todo');
