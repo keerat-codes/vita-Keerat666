@@ -11,6 +11,9 @@ progress_percentage : { type:  String, description: "Required Field", required: 
 status : { type:  String, description: "Required Field", required: true },
 summary_notes : { type:  String, description: "Required Field", required: true },
 review : { type:  String, description: "Required Field", required: true },
+created_at : { type:  String, description: "Required Field", required: true },
+updated_at : { type:  String, description: "Required Field", required: true },
+link : { type:  String, description: "Required Field", required: true },
 });
 
 module.exports = mongoose.model('learningProgress', learningProgressSchema);
