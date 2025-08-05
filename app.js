@@ -9,6 +9,8 @@ require('dotenv').config();
 app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+const dateReminderRoute = require('./routes/dateReminder');
+app.use('/dateReminder', dateReminderRoute);
 const medicineIntakeLogRoute = require('./routes/medicineIntakeLog');
 app.use('/medicineIntakeLog', medicineIntakeLogRoute);
 const medicineRoute = require('./routes/medicine');
